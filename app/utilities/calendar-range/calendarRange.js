@@ -36,7 +36,7 @@ var CalendarRange = {
 
     var lastDay = new Date(endDay);
     //lastDay.setTime(lastDay.getTime() + (6 - endDay.getDay()) * this.DAY);
-    lastDay.setTime(lastDay.getTime() + (6 - endDay.getDay()) * this.DAY - (this.DAY/2));
+    lastDay.setTime(lastDay.getTime() + (6 - endDay.getDay()) * this.DAY + (this.DAY/2));
 
     var date = new Date(firstDay);
     var days = [];

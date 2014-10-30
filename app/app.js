@@ -29,7 +29,7 @@ angular.module('calendarDemoApp', [])
 					if(dayCount == 7){
 						dayCount = 0;
 						weeks.push(week);
-						week = new Array();
+						week = [];
 					}
 				};
 
