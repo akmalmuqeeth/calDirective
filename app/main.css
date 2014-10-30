@@ -1,0 +1,16 @@
+/* your css code goes here */
+.calendarDay{
+	background-color: #9FB7FF;
+}
+
+.weekend {
+	background-color: #FFE3CD;
+}
+
+.dateHeader {
+	background-color: #FF9653;
+}
+
+.today {
+	background-color: red;
+}

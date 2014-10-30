@@ -1,0 +1,43 @@
+<div class="container">
+	<h1>The Calendar Directive</h1>
+	<div class="row">
+		<!-- select month -->
+		<div class="col-sm-4">
+			<select class="form-control" name="selectMonths" ng-model="selectedMonth" ng-options="month.code as month.name for month in months" required>
+				<option style="display:none" value="">select a month</option>
+			</select>
+		</div>
+		<!-- select year -->
+		<div class="col-sm-4">
+			<select class="form-control" name="selectYear" ng-model="selectedYear" ng-options="y for y in years" required></select>
+		</div>
+		
+		<!-- today and next buttons -->
+		<div class="col-sm-4">
+			
+		</div>
+	</div>
+
+	<table class="table table-bordered table-condensed">
+		<thead>
+            <tr class="dateHeader">
+               <th>Sunday</th>
+               <th>Monday</th>
+               <th>Tuesday</th>
+               <th>Wednesday</th>
+               <th>Thursday</th>
+               <th>Friday</th>
+               <th>Saturday</th>
+            </tr>
+        </thead>
+         <tbody>
+			<tr ng-repeat="week in weeks">
+				<td class="calendarDay" 
+				ng-class="{weekend : !date.weekday, today: isToday(date.date)}"
+				ng-repeat="date in week">
+					{{date.day}}
+				</td>
+			</tr>
+         </tbody>
+	</table>
+</div>
